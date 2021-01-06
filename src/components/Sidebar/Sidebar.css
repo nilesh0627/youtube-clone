@@ -1,0 +1,10 @@
+.sidebar{
+    background: var(--light-background-color);
+    height: 1100px;
+}
+.sidebar > hr{
+    height: 0.1px;
+    background-color: lightgray;
+    margin: 10px 0;
+    border: 0;
+}
