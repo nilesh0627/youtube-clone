@@ -1,14 +1,33 @@
+import React,{useState,useEffect} from 'react'
 import './App.css';
-import {useState} from 'react';
+import {videoSearch,recommendedVideos} from './components/api/youtube'
 import Home from "./Pages/Home/Home"
 function App() {
-  const [sidebar,toggleSidebar] = useState(true);
+  const [recommended,setRecommended]=useState([])
 
-  const handleToggleSidebar=()=>toggleSidebar(value=>!value)
+  const searchVideo=(searchTerm)=>{
+    videoSearch(searchTerm)
+  }
+
+  const suggestedVideos=()=>{
+    recommendedVideos().then((data)=>{
+      setRecommended(data.items)
+    })
+      
+  }
+
+
+  useEffect(()=>{
+    suggestedVideos()
+  },[])
+
+
+  
 
   return (
     <div className="App">
-      <Home handleToggleSidebar={handleToggleSidebar} sidebar={sidebar}/>
+      <Home searchVideo={searchVideo} recommended={recommended}/>
+      The length : {recommended.length}
     </div>
   );
 }
