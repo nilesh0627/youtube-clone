@@ -1,6 +1,6 @@
 import React from 'react'
-import {uploadDateFormat} from './uploadDateFormat'
-import {viewsFormat} from './viewsFormat'
+import {uploadDateFormat} from '../../helper/uploadDateFormat'
+import {viewsFormat} from '../../helper/viewsFormat'
 import './VideoCard.css'
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 function VideoCard({video}) {
