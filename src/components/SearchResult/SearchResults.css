@@ -1,3 +1,7 @@
-.searchResults{
+.searchResults__container{
     grid-column: 2/-1;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }

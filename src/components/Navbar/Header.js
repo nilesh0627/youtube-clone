@@ -5,12 +5,16 @@ import VideoCallSharpIcon from '@material-ui/icons/VideoCallSharp';
 import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchBar from './SearchBar'
+import {Link} from 'react-router-dom'
 const Header = ({searchVideo}) => {
     return (
         <div className="header">
             <div className="header__logo">
                 <button><MenuIcon /></button>
+                <Link to='/'>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="Logo"/>
+                </Link>
+                
             </div>
             
             

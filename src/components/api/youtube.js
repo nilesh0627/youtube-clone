@@ -9,7 +9,7 @@ export async function videoSearch(text){
             q:text
         }
     })
-    console.log(response)
+    console.log(response.data)
     return response.data
     
 }

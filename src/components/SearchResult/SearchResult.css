@@ -1,0 +1,20 @@
+.searchResult{
+    display: flex;
+    gap:20px;
+}
+
+.searchResult__info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.searchResult__info__title{
+    font-size: 18px;
+}
+
+.searchResult__info__uploadtime,.searchResult__info__channeltitle,.searchResult__info__description{
+    color: gray;
+    font-size: 14px;
+}
