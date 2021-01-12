@@ -1,6 +1,10 @@
 .sidebar{
     background: var(--light-background-color);
-    height: 1100px;
+    position: fixed;
+    height: 100vh;
+    grid-column: 1/2;
+    margin-top: 75px;
+    overflow: auto;
 }
 .sidebar > hr{
     height: 0.1px;

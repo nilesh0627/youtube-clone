@@ -1,0 +1,33 @@
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 230px;
+}
+
+.video > .video__thumbnail img{
+    width: 230px;
+}
+
+.video__info{
+    display: flex;
+}
+
+.video__info > p:first-child{
+    margin-right: 10px;
+}
+
+.video__title{
+    font-weight: 500px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.video__channel{
+    display: flex;
+}
+
+.video__channel,.video__info{
+    color: gray;
+    font-size: 14px;
+}

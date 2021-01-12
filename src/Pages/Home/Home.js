@@ -1,19 +1,14 @@
 import React from 'react'
-import Header from "../../components/Navbar/Header"
-import Sidebar from "../../components/Sidebar/Sidebar"
-import Videos from "../../components/Video/Videos"
+import Videos from "../../components/VideoFeed/Videos"
 import './Home.css'
-const Home = ({searchVideo,recommended}) => {
-    
+import MainLayout from '../../Layout/MainLayout'
+
+const Home = ({searchVideo,recommended}) => { 
     return (
-        <>
-            <Header searchVideo={searchVideo}/>
-            <div className="app__page">
-                <Sidebar/>
-                <Videos recommended={recommended}/>
-            </div>
-            
-        </>
+        <MainLayout searchVideo={searchVideo}>
+            <Videos recommended={recommended}/>
+        </MainLayout>
+
     )
 }
 

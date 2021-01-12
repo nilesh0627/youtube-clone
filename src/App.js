@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import './App.css';
 import {videoSearch,recommendedVideos} from './components/api/youtube'
-import Home from "./Pages/Home/Home"
+
+import Routes from './Routes/Routes'
 function App() {
   const [recommended,setRecommended]=useState([])
 
@@ -26,8 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home searchVideo={searchVideo} recommended={recommended}/>
-      The length : {recommended.length}
+      <Routes searchVideo={searchVideo} recommended={recommended}/>
     </div>
   );
 }

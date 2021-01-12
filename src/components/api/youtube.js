@@ -3,14 +3,15 @@ import {KEY ,baseURL } from './youtubeConfig'
 export async function videoSearch(text){
     const response=await axios.get(`${baseURL}/search`,{
         params:{
-            part:'snippet',
+            part:'id,snippet',
             key:KEY,
-            maxResults:25,
+            maxResults:10,
             q:text
         }
     })
-
     console.log(response)
+    return response.data
+    
 }
 
 
@@ -20,7 +21,7 @@ export async function recommendedVideos(){
             part:'snippet,statistics,contentDetails,id',
             chart:'mostPopular',
             key:KEY,
-            maxResults:10,
+            maxResults:20,
         }
     })
 
