@@ -1,6 +1,7 @@
 import React from 'react'
 import './SearchResults.css'
 import SearchResult from './SearchResult'
+import {connect} from 'react-redux'
 function SearchResults({searchResults}) {
     return (
         <div className="searchResults__container">
@@ -13,5 +14,13 @@ function SearchResults({searchResults}) {
         </div>
     )
 }
+const mapStateToProps=({searchResults})=>{
+    return {
+        searchResults:searchResults.items
+    }
+}
 
-export default SearchResults
+
+export default connect(mapStateToProps)(SearchResults)
+
+

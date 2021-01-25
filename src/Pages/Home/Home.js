@@ -3,10 +3,10 @@ import Videos from "../../components/VideoFeed/Videos"
 import './Home.css'
 import MainLayout from '../../Layout/MainLayout'
 
-const Home = ({searchVideo,recommended}) => { 
+const Home = () => { 
     return (
-        <MainLayout searchVideo={searchVideo}>
-            <Videos recommended={recommended}/>
+        <MainLayout>
+            <Videos/>
         </MainLayout>
 
     )

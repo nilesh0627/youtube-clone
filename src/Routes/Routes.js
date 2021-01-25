@@ -3,13 +3,12 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 
 import Home from "../Pages/Home/Home"
 import Results from '../Pages/Results/Results'
-function Routes({searchVideo,recommended,searchResults}) {
+function Routes() {
     return (
         <BrowserRouter>
         <Switch>
-        <Route exact path="/" render={()=><Home searchVideo={searchVideo} recommended={recommended}/>}/>
-        <Route exact path="/results" render={()=><Results searchVideo={searchVideo} 
-               searchResults={searchResults}/>}/>
+        <Route exact path="/" render={()=><Home />}/>
+        <Route exact path="/results" render={()=><Results />}/>
         </Switch>
         </BrowserRouter>
     )
