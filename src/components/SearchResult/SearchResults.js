@@ -6,6 +6,7 @@ import {videoSearch} from '../../Redux/actions'
 import {connect} from 'react-redux'
 function SearchResults({searchResults,searchQuery,videoSearch,nextPageToken}) {
     const loadMore=()=>{
+        console.log(nextPageToken)
         videoSearch(searchQuery,nextPageToken)
     }
     return (

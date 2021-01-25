@@ -18,15 +18,3 @@
     color: gray;
     font-size: 14px;
 }
-
-
-
-.search__channel__img > img{
-    border-radius: 50%;
-    margin-left: 20px;
-}
-
-.channel__info{
-    margin-top: 20px;
-    margin-left: 20px;
-}

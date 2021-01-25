@@ -13,10 +13,7 @@ export function videoSearch(text,pageToken=''){
         }).then((response)=>{
             dispatch({
                 type:'SEARCH_RESULTS',
-                payload:{
-                    data:response.data,
-                    text:text
-                }
+                payload:response.data
             })
         })
     }

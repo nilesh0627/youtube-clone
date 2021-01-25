@@ -1,16 +1,16 @@
 import React from 'react'
-import './SearchResult.css'
+import './channelResult.css'
 import {uploadDateFormat} from '../../helper/uploadDateFormat'
-function SearchResult({searchResult}) {
-    const {searchResult:{snippet:{channelTitle,description,publishTime,title,thumbnails:{medium:{url:imgSrc}}},id:{kind:type}}}={searchResult}
+function ChannelResult({searchResult}) {
+    
+    const {searchResult:{snippet:{channelTitle,description,publishTime,title,thumbnails:{medium:{url:imgSrc}}}}}={searchResult}
     const uploadTime=uploadDateFormat(publishTime)
-    console.log(searchResult)
     return (
         <div className="searchResult">
-            <div className={type!=='youtube#channel' ? '' : 'search__channel__img'}>
+            <div className="searchResult__image">
                 <img src={imgSrc} alt={title}/>
             </div>
-            <div className={type!=='youtube#channel' ? 'searchResult__info' : 'searchResult__info channel__info'}>
+            <div className="searchResult__info">
                 <div className="searchResult__info__title">{title}</div>
                 <div className="searchResult__info__uploadtime">{uploadTime}</div>
                 <div className="searchResult__info__channeltitle">{channelTitle}</div>
@@ -20,4 +20,4 @@ function SearchResult({searchResult}) {
     )
 }
 
-export default SearchResult
+export default ChannelResult
