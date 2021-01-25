@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import './Header.css'
-import {videoSearch} from '../../Redux/actions'
+import {videoSearch,searchQuery} from '../../Redux/actions'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
-const SearchBar = ({videoSearch}) => {
+const SearchBar = ({videoSearch,searchQuery}) => {
     const [term,setTerm]=useState('')
     const [redirectToResults,setRedirectToResults]=useState(false)
     const handleChange=(event)=>{
@@ -13,9 +13,11 @@ const SearchBar = ({videoSearch}) => {
 
     const handleSubmit=(event)=>{
         event.preventDefault()
+        searchQuery(term)
         videoSearch(term)
         setRedirectToResults(true)
     }
+
     return (
         <>
         <form onSubmit={handleSubmit} className="header__form">
@@ -28,7 +30,8 @@ const SearchBar = ({videoSearch}) => {
 }
 
 const mapDispatchToProps={
-    videoSearch:videoSearch
+    videoSearch:videoSearch,
+    searchQuery:searchQuery
 }
 
 export default connect(null,mapDispatchToProps)(SearchBar)

@@ -8,9 +8,11 @@
     grid-template-columns: repeat(4,1fr);
     gap:1fr;
     row-gap: 30px;
-    
+    margin-bottom: 20px;
 }
 
 .videos > h2{
     margin-bottom: 25px;
 }
+
+

@@ -1,7 +1,14 @@
-.searchResults__container{
+.searchResults{
     grid-column: 2/-1;
+}
+
+.searchResults > h2{
+    margin: 20px 0;
+}
+.searchResults__container{
     margin-right: 20px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
+

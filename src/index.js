@@ -9,10 +9,11 @@ import './index.css';
 import App from './App';
 import {setRecommended} from './Redux/reducers/setRecommended'
 import {setSearchResults} from './Redux/reducers/setSearchResults'
-
+import {setSearchQuery} from './Redux/reducers/setSearchQuery'
 const youtubeReducer=combineReducers({
                     recommended:setRecommended,
-                    searchResults:setSearchResults
+                    searchResults:setSearchResults,
+                    searchQuery:setSearchQuery
                     })
 
 const store=createStore(youtubeReducer,composeWithDevTools(applyMiddleware(thunk)))                    

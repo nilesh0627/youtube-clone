@@ -5,8 +5,13 @@ const defaultState={
 export function setRecommended(recommended=defaultState,action){
     switch (action.type) {
         case 'RECOMMENDED':
-            return {...recommended,items:[...defaultState.items,...action.payload.items],nextPageToken:action.payload.nextPageToken}
+            recommended={
+                items:[...recommended.items,...action.payload.items],
+                nextPageToken:action.payload.nextPageToken
+            }
+            return recommended
         default:
             return recommended
     }
 }
+
