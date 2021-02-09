@@ -44,7 +44,18 @@
         color: lightgray;
         font-size: 1rem;
         margin-left: 0.5rem;
+        color: #fff;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+
+
+
 
 .header__form > input:focus{
     outline: none;
