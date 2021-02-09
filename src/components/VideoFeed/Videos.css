@@ -4,11 +4,14 @@
 }
 
 .videos > .videos__container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
     gap:1fr;
     row-gap: 30px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .videos > h2{

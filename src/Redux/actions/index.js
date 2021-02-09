@@ -45,3 +45,10 @@ export function searchQuery(term){
         payload:term
     }
 }
+
+export function currentVideo(video){
+    return {
+        type:'CURRENT_VIDEO',
+        payload:video
+    }
+}

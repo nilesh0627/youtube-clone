@@ -3,16 +3,26 @@ import {uploadDateFormat} from '../../helper/uploadDateFormat'
 import {viewsFormat} from '../../helper/viewsFormat'
 import './VideoCard.css'
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
-function VideoCard({video}) {
+import {currentVideo} from '../../Redux/actions'
+import {connect} from 'react-redux'
+import {useHistory} from 'react-router-dom'
+
+function VideoCard({video,currentVideo}) {
+    let history=useHistory()
     const {
         video:{snippet:{thumbnails:{medium:{url:src}},title:videoTitle,channelTitle:channelName,publishedAt:uploadDate},
         statistics:{viewCount:totViews}}
     }={video}
     const uploadTime=uploadDateFormat(uploadDate)
     const views=viewsFormat(totViews)
+
+    const handleClick=()=> {
+        currentVideo(video)
+        history.push('/video')
+    }
     
     return (
-        <div className="video">
+        <div className="video" onClick={handleClick}>
             <div className="video__thumbnail"><img src={src} alt="Thumbnail"/></div>
             <div className="video__title">{videoTitle}</div>
             <div className="video__channel">
@@ -23,16 +33,14 @@ function VideoCard({video}) {
                 <p>{views} views</p>
                 <p>{uploadTime}</p>
             </div>
-            
         </div>
     )
 }
 
-export default VideoCard
+const mapDispatchToProps={
+    currentVideo:currentVideo
+}
+export default connect(null,mapDispatchToProps)(VideoCard)
 
 
 
-//image
-// video Title
-// Channel Name
-// 3.4M Views 5 days ago

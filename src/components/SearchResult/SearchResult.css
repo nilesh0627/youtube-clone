@@ -1,6 +1,7 @@
 .searchResult{
     display: flex;
     gap:20px;
+    cursor: pointer;
 }
 
 .searchResult__info{
@@ -23,7 +24,7 @@
 
 .search__channel__img > img{
     border-radius: 50%;
-    margin-left: 20px;
+    margin:0 35px;
 }
 
 .channel__info{

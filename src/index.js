@@ -10,10 +10,12 @@ import App from './App';
 import {setRecommended} from './Redux/reducers/setRecommended'
 import {setSearchResults} from './Redux/reducers/setSearchResults'
 import {setSearchQuery} from './Redux/reducers/setSearchQuery'
+import {setCurrentVideo} from './Redux/reducers/setCurrentVideo'
 const youtubeReducer=combineReducers({
                     recommended:setRecommended,
                     searchResults:setSearchResults,
-                    searchQuery:setSearchQuery
+                    searchQuery:setSearchQuery,
+                    currentVideo:setCurrentVideo
                     })
 
 const store=createStore(youtubeReducer,composeWithDevTools(applyMiddleware(thunk)))                    

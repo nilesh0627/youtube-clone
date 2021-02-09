@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 230px;
+    cursor: pointer;
 }
 
 .video > .video__thumbnail img{

@@ -6,7 +6,7 @@ function MainLayout(props){
     console.log(props)
     return (
         <div className="app__page">
-            <Header searchVideo={props.searchVideo}/>
+            <Header />
             <Sidebar/>
             {props.children}
         </div>

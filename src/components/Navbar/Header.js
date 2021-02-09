@@ -6,7 +6,7 @@ import AppsIcon from '@material-ui/icons/Apps';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchBar from './SearchBar'
 import {Link} from 'react-router-dom'
-const Header = ({searchVideo}) => {
+const Header = () => {
     return (
         <div className="header">
             <div className="header__logo">
@@ -18,7 +18,7 @@ const Header = ({searchVideo}) => {
             </div>
             
             
-            <SearchBar searchVideo={searchVideo}/>
+            <SearchBar />
             
 
             <div className="header__icons">
