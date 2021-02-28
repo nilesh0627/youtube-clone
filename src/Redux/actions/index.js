@@ -31,10 +31,18 @@ export function recommendedVideos(pageToken=''){
                 pageToken:pageToken
             }
         }).then((response)=>{
-            dispatch({
-                type:'RECOMMENDED',
-                payload:response.data
-            })
+            if(pageToken===''){
+                dispatch({
+                    type:'RECOMMENDED',
+                    payload:response.data
+                })
+            }
+            else{
+                dispatch({
+                    type:'LOAD_MORE_RECOMMENDED',
+                    payload:response.data
+                })
+            }
         })
     }
 }

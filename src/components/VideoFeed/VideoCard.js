@@ -3,11 +3,9 @@ import {uploadDateFormat} from '../../helper/uploadDateFormat'
 import {viewsFormat} from '../../helper/viewsFormat'
 import './VideoCard.css'
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
-import {currentVideo} from '../../Redux/actions'
-import {connect} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 
-function VideoCard({video,currentVideo}) {
+function VideoCard({video}) {
     let history=useHistory()
     const {
         video:{snippet:{thumbnails:{medium:{url:src}},title:videoTitle,channelTitle:channelName,publishedAt:uploadDate},
@@ -17,14 +15,13 @@ function VideoCard({video,currentVideo}) {
     const views=viewsFormat(totViews)
 
     const handleClick=()=> {
-        currentVideo(video)
-        history.push('/video')
+        history.push(`/video/${video.id}`)
     }
     
     return (
         <div className="video" onClick={handleClick}>
             <div className="video__thumbnail"><img src={src} alt="Thumbnail"/></div>
-            <div className="video__title">{videoTitle}</div>
+            <div className="video__title">{decodeURIComponent(videoTitle)}</div>
             <div className="video__channel">
                 <div className="video__channel__name">{channelName}</div>
                 <div className="video__channel__icon"><VerifiedUserIcon style={{fontSize:'medium'}}/></div>
@@ -37,10 +34,7 @@ function VideoCard({video,currentVideo}) {
     )
 }
 
-const mapDispatchToProps={
-    currentVideo:currentVideo
-}
-export default connect(null,mapDispatchToProps)(VideoCard)
+export default VideoCard
 
 
 

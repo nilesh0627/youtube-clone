@@ -12,7 +12,8 @@ export function setSearchResults(searchResults=defaultState,action){
                 items:[...searchResults.items,...action.payload.items],
                 nextPageToken:action.payload.nextPageToken
             }
-            return searchResults        
+            return searchResults
+                    
         default:
             return searchResults
     }

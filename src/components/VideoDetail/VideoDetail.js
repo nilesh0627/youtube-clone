@@ -1,12 +1,11 @@
 import React from 'react'
-
-function VideoDetail({video}) {
-    console.log(video)
-    const videoSrc=`https://www.youtube.com/embed/${video.id}`
-    console.log(videoSrc)
+import {useParams} from 'react-router-dom'
+function VideoDetail() {
+    const {id}=useParams()
+    const videoSrc=`https://www.youtube.com/embed/${id}`
     return (
         <div>
-            <iframe src={videoSrc} frameBorder="0" title='something'/>
+            <iframe width="727" height="409" src={videoSrc} frameBorder="0" title='something'/>
         </div>
     )
 }

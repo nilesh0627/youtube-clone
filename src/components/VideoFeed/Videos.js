@@ -4,15 +4,21 @@ import './Videos.css'
 import VideoCard from './VideoCard'
 import Button from '../../utils/Button'
 import {recommendedVideos} from '../../Redux/actions'
-const Videos = ({recommended,recommendedVideos,nextPageToken}) => {
-
+const Videos = ({recommended,nextPageToken,dispatch}) => {
     useEffect(()=>{
-        recommendedVideos()
+            if(recommended.length===0){
+                console.log('Videos Mount')
+                dispatch(recommendedVideos())
+            }
+        return ()=>{
+            console.log('Videos unmounted')
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     const loadMore=()=>{
         console.log(nextPageToken)
-        recommendedVideos(nextPageToken)
+        dispatch(recommendedVideos(nextPageToken))
     }
 
     return (
@@ -35,7 +41,5 @@ const mapStateToProps=({recommended})=>{
     }
 }
 
-const mapDispatchToProps={
-    recommendedVideos:recommendedVideos
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Videos)
+
+export default connect(mapStateToProps)(Videos)
