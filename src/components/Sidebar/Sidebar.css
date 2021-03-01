@@ -3,8 +3,11 @@
     position: fixed;
     height: 100vh;
     grid-column: 1/2;
-    margin-top: 75px;
     overflow: auto;
+}
+
+.nosidebar{
+    display: none;
 }
 .sidebar > hr{
     height: 0.1px;

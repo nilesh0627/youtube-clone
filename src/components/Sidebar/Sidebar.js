@@ -10,9 +10,10 @@ import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-const Sidebar = () => {
+const Sidebar = ({sidebarDisplay}) => {
+  const sidebarStyles=sidebarDisplay ? 'sidebar' : 'nosidebar'
   return (
-    <div className="sidebar">
+    <div className={sidebarStyles}>
       <SidebarRow selected="selected" Icon={HomeIcon} title="Home" />
       <SidebarRow Icon={WhatshotIcon} title="Trending" />
       <SidebarRow Icon={SubscriptionsIcon} title="Subscriptions" />

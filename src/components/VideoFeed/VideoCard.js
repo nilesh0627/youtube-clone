@@ -21,7 +21,7 @@ function VideoCard({video}) {
     return (
         <div className="video" onClick={handleClick}>
             <div className="video__thumbnail"><img src={src} alt="Thumbnail"/></div>
-            <div className="video__title">{decodeURIComponent(videoTitle)}</div>
+            <div className="video__title">{videoTitle}</div>
             <div className="video__channel">
                 <div className="video__channel__name">{channelName}</div>
                 <div className="video__channel__icon"><VerifiedUserIcon style={{fontSize:'medium'}}/></div>

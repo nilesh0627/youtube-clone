@@ -25,6 +25,11 @@
 
 .header__logo > button{
     margin-right: 1.5rem;
+    outline: none;
+}
+
+.header__logo > button:hover{
+    color: red;
 }
 
 .header__form{

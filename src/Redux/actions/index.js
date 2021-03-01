@@ -54,9 +54,27 @@ export function searchQuery(term){
     }
 }
 
-export function currentVideo(video){
-    return {
-        type:'CURRENT_VIDEO',
-        payload:video
+// export function currentVideo(video){
+//     return {
+//         type:'CURRENT_VIDEO',
+//         payload:video
+//     }
+// }
+
+
+export function videoDetail(id){
+    return async(dispatch)=>{
+        const result=await axios.get(`${baseURL}/videos`,{
+            params:{
+                part:'snippet,statistics,contentDetails,id',
+                key:KEY,
+                id:id
+            }
+        })
+        console.log(result)
+        dispatch({
+            type:'VIDEO_DETAIL',
+            payload:result.data
+        })
     }
 }

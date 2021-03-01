@@ -1,7 +1,7 @@
 export function viewsFormat(views){
     let result,output;
     if(views<=999)
-        result=views
+        return views
     else if(views>=1000 && views<=999999)
         result=views/1000+'K'
     else if(views>=1000000 && views<=999999999)

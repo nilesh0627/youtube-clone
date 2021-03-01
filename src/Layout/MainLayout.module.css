@@ -1,0 +1,24 @@
+/* .app__page{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 75px auto;
+}
+ */
+
+ .layout{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .layout__container{
+     display: grid;
+     grid-template-columns: 0.8fr 4fr;
+     grid-template-rows: auto;
+ }
+
+ .layout__full{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+ }
+

@@ -1,0 +1,51 @@
+.video{
+  width: 55%;
+}
+.video__container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 50%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive__iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__title{
+  font-size: larger;
+  padding: 0.5rem 0;
+}
+
+
+
+.video__stats{
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+
+.video__icons{
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+
+.video__icons > *{
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+/* .video__icons > * :hover{
+  color: red;
+} */
+
+.video__icons > * :nth-child(2){
+  font-size: 16px;
+}

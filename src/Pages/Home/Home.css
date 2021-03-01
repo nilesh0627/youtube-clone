@@ -1,7 +1,7 @@
 
 .app__page{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 75px auto;
 }
 

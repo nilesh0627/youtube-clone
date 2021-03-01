@@ -1,6 +1,6 @@
 export function setCurrentVideo(video={},action){
     switch (action.type) {
-        case 'CURRENT_VIDEO':
+        case 'VIDEO_DETAIL':
             video=action.payload
             return video
     

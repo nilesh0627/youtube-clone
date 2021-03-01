@@ -1,14 +1,17 @@
-import React from 'react'
-import './MainLayout.css'
+import React,{useState} from 'react'
+import styles from './MainLayout.module.css'
 import Header from "../components/Navbar/Header"
 import Sidebar from "../components/Sidebar/Sidebar"
 function MainLayout(props){
-    console.log(props)
+    const [sidebarDisplay,setSidebarDisplay]=useState(true)
+    const containerStyles=sidebarDisplay ? styles.layout__container : styles.layout__full
     return (
-        <div className="app__page">
-            <Header />
-            <Sidebar/>
+        <div className={styles.layout}>
+            <Header sidebarDisplay={sidebarDisplay} setSidebarDisplay={setSidebarDisplay}/>
+        <div className={containerStyles}>
+            <Sidebar sidebarDisplay={sidebarDisplay}/>
             {props.children}
+        </div>
         </div>
     )
 }
