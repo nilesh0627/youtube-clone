@@ -8,6 +8,7 @@ export function viewsFormat(views){
         result=views/1000000+'M'   
     else if(views>=1000000000 && views<=999999999999)
         result=views/1000000000+'B'
+    else return ''
 
 
     const arr1=result.split('.')

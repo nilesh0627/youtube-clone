@@ -18,7 +18,7 @@ function VideoDescription({title,views,date,likes,dislikes}) {
             <blockquote>{views} views <FiberManualRecordIcon style={{fontSize:7}}/> {istDateFormat(date)}</blockquote>
             <div className={styles.video__icons}>
                 <div><ThumbUpIcon /> <span>{viewsFormat(likes)}</span></div>
-                <div><ThumbDownAltIcon /> <span>{viewsFormat(dislikes)}</span></div>
+                <div><ThumbDownAltIcon /> <h6>DISLIKE</h6></div>
                 <div><ShareIcon/> <span>Share</span></div>
                 <div><BookmarkBorderIcon/> <span>Save</span></div>
             </div>
