@@ -1,12 +1,11 @@
 import React from 'react'
 import VideoDetail from '../../components/VideoDetail/VideoDetail'
-import Header from "../../components/Navbar/Header"
+import MainLayout from '../../Layout/MainLayout'
 function VideoInfo({video}) {
     return (
-        <div>
-            <Header />
+        <MainLayout>
             <VideoDetail />
-        </div>
+        </MainLayout>
     )
 }
 

@@ -1,5 +1,6 @@
 .video{
-  width: 55%;
+  width: 65%;
+  margin: auto;
 }
 .video__container{
   position: relative;
@@ -48,4 +49,16 @@
 
 .video__icons > * :nth-child(2){
   font-size: 16px;
+}
+
+@media screen and (max-width: 550px) {
+  .video{
+    width: 90%;
+  }
+  .video__stats{
+    flex-direction: column;
+  }
+  .video__icons{
+    padding-top: 1rem;
+  }
 }

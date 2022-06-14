@@ -90,6 +90,17 @@ input:-webkit-autofill:active {
 }
 
 
+@media screen and (max-width: 550px) {
+    .header__form{
+        width: 70%;
+    }
+    .header__icons{
+        display: none;
+    }
+    .header__form > button {
+        width: 20%;
+    }
+}
 
 
 

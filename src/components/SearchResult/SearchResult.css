@@ -31,3 +31,14 @@
     margin-top: 20px;
     margin-left: 20px;
 }
+
+
+@media screen and (max-width: 550px) {
+    .searchResult{
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchResult__info{
+        max-width: 80%;
+    }
+  }

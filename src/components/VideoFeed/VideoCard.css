@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 230px;
+    width: 19rem;
     cursor: pointer;
 }
 
+@media screen and (max-width: 550px) {
+    .video{
+        width: 20rem;
+    }
+  }
+
 .video > .video__thumbnail img{
-    width: 230px;
+    width: 100%;
 }
 
 .video__info{
